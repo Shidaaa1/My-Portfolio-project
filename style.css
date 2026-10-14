@@ -9,6 +9,8 @@ header {
   height: 70px;
   align-items: center;
   justify-content: space-around;
+  position: sticky;
+  top: 2px;
 }
 
 h2 {
@@ -24,7 +26,6 @@ h2:hover {
 }
 .nav-links {
   display: flex;
-  border: 1px solid white;
   gap: 50px;
 }
 
@@ -33,6 +34,8 @@ h2:hover {
   text-decoration: none;
   font-weight: bold;
   transition: 0.5s;
+  p
+  
 }
 
 .nav-links a:hover {
@@ -50,6 +53,7 @@ h2:hover {
   background-color: orange;
   color: white;
   cursor: pointer;
+  border: 1px solid black;
 }
 .hero-section {
   display: flex;
@@ -76,7 +80,7 @@ h2:hover {
 
 .image-div img {
   width: 400px;
-  height: 400px;
+  height: 500px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -91,14 +95,68 @@ h2:hover {
   padding: 10px 25px;
   background-color: black;
   color: white;
-  border: none;
+  border: 1px solid black;
   border-radius: 7px;
+  transition: 0.5s;
+}
+
+.hire:hover{
+background: white;
+color: black;
+border: 1px solid black;
+
+
 }
 
 .experience {
   padding: 10px 25px;
-  background-color: orange;
+  background-color: orangered;
   color: white;
-  border: none;
+  border: 1px solid black;
   border-radius: 7px;
+  transition: 0.5s;
 }
+
+.experience:hover{
+  background: white;
+  color: black;
+  border: 1px solid black;
+  }
+
+.about-section{
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+
+}
+
+ .about-img{
+  border: 5px solid rgb(249, 94, 4);
+  box-shadow: 
+  0.5px 0.5px 20px rgb(249, 94, 4),
+  0.5px 0.5px 20px rgb(249, 94, 4),
+  0.5px 0.5px 20px rgb(249, 94, 4);
+ }
+
+ .about-div{
+  width: 50%;
+
+ }
+
+ .about-me{
+  font-size: 30px;
+ }
+
+ .frnt-end{
+  font-size: 45px;
+  color: white;
+  font-weight: bold;
+ }
+
+ .text{
+  color: white;
+  margin-top: 20px;
+ }
