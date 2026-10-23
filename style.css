@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
+  }
 header {
   background-color: black;
   display: flex;
@@ -34,7 +34,7 @@ h2:hover {
   text-decoration: none;
   font-weight: bold;
   transition: 0.5s;
-  p
+  
   
 }
 
@@ -104,8 +104,6 @@ h2:hover {
 background: white;
 color: black;
 border: 1px solid black;
-
-
 }
 
 .experience {
@@ -242,7 +240,6 @@ box-shadow:
 1px 1px 30px orangered,
 1px 1px 20px orangered, 
 1px 1px 10px orangered;
-
 transform: translateY(-10px);
 }
 
@@ -253,4 +250,106 @@ transform: translateY(-10px);
 
 small{
   color: white;
+}
+
+/*.hamburger {
+  display: none;
+  cursor: pointer;
+  }
+
+/*.hamburger span { 
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  border-radius: 2px;
+}
+
+
+
+/* Navigation container */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 15px 5%;
+  
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Hamburger menu button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: #222222;
+  padding: 5px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  /* Show the hamburger button */
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  /* Hide the menu by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  /* Show menu when JavaScript adds is-open */
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  /* Individual mobile links */
+  .nav-links a {
+    display: block;
+    padding: 15px 5%;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
 }

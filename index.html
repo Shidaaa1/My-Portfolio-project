@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,14 +11,21 @@
       <div class="logo">
         <h2><span class="split">Shi</span>daa</h2>
       </div>
-      <nav class="nav-links">
-        <a href="">Home</a>
-        <a href="">Services</a>
-        <a href="">Experience</a>
-        <a href="">Projects</a>
-        <a href="">Education</a>
-      </nav>
 
+<button
+  class="menu-toggle"
+  aria-expanded="false"
+  aria-label="Open navigation menu"
+>
+  ☰
+</button>
+
+    <nav class="nav-links">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+     </nav>
       <button class="contact-btn">Contact Me</button>
     </header>
     <main>
@@ -42,19 +49,16 @@
           </div>
         </div>
         <div class="image-div">
-          <img
-            src="C:\Users\user\Pictures\Camera Roll\H0LYOLSHIDA\IMG-20241227-WA0218.jpg"
-            alt=""
-          />
+          <img src="image/IMG-20241227-WA0218.jpg" alt="image">
+          
         </div>
       </section>
       <section class="about-section">
         <div class="image-div">
           <img
-            src="C:\Users\user\Pictures\Camera Roll\H0LYOLSHIDA\IMG-20241227-WA0218.jpg"
-            alt=""
-            class="about-img"
-          />
+            src="image/IMG-20241227-WA0218.jpg"
+            alt="image"
+            class="about-img"/>
         </div>
 
         <div class="intro-div">
@@ -107,8 +111,8 @@
          <img src="image/icons8-linkedin-50.png" alt="LimkedIn">
          <img src="image/icons8-facebook-50.png" alt="Facebook">
          <img src="image/icons8-instagram-50.png" alt="instagram">
-         <img src="/image/" alt="">
-      </div>
+        
+            </div>
 
       <div class="footer-links">
         <a href="">FAQ</a>
@@ -122,5 +126,25 @@
 
          </div>
     </footer>
+      <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navigation = document.querySelector('.nav-links');
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = navigation.classList.toggle('is-open');
+        menuToggle.classList.toggle('is-open', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      });
+
+      navigation.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          navigation.classList.remove('is-open');
+          menuToggle.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', 'Open navigation menu');
+        });
+      });
+    </script>
   </body>
 </html>
